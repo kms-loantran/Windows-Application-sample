@@ -18,7 +18,7 @@ steps:
 - task: katalonTask@1
   inputs:
     version: '8.2.5'
-    executeArgs: '-retry=0 -testSuitePath="Test Suites/putty" -browserType="Windows" -executionProfile="default" -apiKey="2199b58d-de67-448a-9135-4b29ee9c53bf"'
+    executeArgs: ' -retry=0 -testSuitePath="Test Suites/start winappdriver by script" -browserType="Windows" -executionProfile="default" -apiKey="2199b58d-de67-448a-9135-4b29ee9c53bf"'
 
 - script: |
     echo Add other tasks to build, test, and deploy your project.
