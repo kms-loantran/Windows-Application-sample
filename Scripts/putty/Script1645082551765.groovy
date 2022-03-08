@@ -16,31 +16,17 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
+import com.kms.katalon.core.configuration.RunConfiguration
 
-Windows.startApplicationWithTitle('C:\\Program Files\\PuTTY\\putty.exe', 'PuTTY Configuration')
+Windows.startApplicationWithTitle(RunConfiguration.getProjectDir() + '\\PuTTY\\putty.exe', 'PuTTY Configuration')
 
 Windows.click(findWindowsObject('Object Repository/putty/TreeItem'))
 
-Windows.delay(2)
-
 Windows.click(findWindowsObject('Object Repository/putty/TreeItem(1)'))
-Windows.delay(2)
 
 Windows.click(findWindowsObject('Object Repository/putty/TreeItem(2)'))
-Windows.delay(2)
 
 Windows.click(findWindowsObject('Object Repository/putty/TreeItem(3)'))
-Windows.delay(2)
 
-Windows.click(findWindowsObject('Object Repository/putty/TreeItem(4)'))
-
-Windows.click(findWindowsObject('Object Repository/putty/TreeItem(5)'))
-Windows.delay(2)
-
-Windows.click(findWindowsObject('Object Repository/putty/TreeItem(6)'))
-Windows.delay(2)
-
-Windows.click(findWindowsObject('Object Repository/putty/TreeItem(7)'))
-
-println 'test abdcccccccccc'
+Windows.closeApplication()
 
