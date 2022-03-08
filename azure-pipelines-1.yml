@@ -11,6 +11,9 @@ pool:
   demands:
    - agent.Name -equals vickyWindowsSelfHosted
 
+steps:
+- script: echo Hello, world!
+  displayName: 'Run a one-line script'
 
 - task: katalonTask@1
   inputs:
