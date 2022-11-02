@@ -19,7 +19,7 @@ steps:
 
 - task: katalonTask@1
   inputs:
-    version: '8.2.5'
+    version: '8.5.2'
     executeArgs: '-retry=0 -testSuitePath="Test Suites/putty" -browserType="Windows" -executionProfile="default" -apiKey="b5fa5836-b028-450f-9c3c-9c2e5ad9e36f" -licenseRelease=true -orgID=89151'
 
 - task: Windows Application Driver@0
