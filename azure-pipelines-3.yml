@@ -1,0 +1,32 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+- master
+
+pool:
+  vmImage: windows-latest
+
+steps:
+- script: echo Hello, world!
+  displayName: 'Run a one-line script'
+
+- task: Windows Application Driver@0
+  inputs:
+    OperationType: 'Start'
+
+- task: katalonTask@1
+  inputs:
+    version: '8.2.5'
+    executeArgs: '-retry=0 -testSuitePath="Test Suites/putty" -browserType="Windows" -executionProfile="default" -apiKey="b5fa5836-b028-450f-9c3c-9c2e5ad9e36f" -licenseRelease=true -orgID=89151'
+
+- task: Windows Application Driver@0
+  inputs:
+    OperationType: 'Stop'
+
+- script: |
+    echo Add other tasks to build, test, and deploy your project.
+    echo See https://aka.ms/yaml
+  displayName: 'Run a multi-line script'
